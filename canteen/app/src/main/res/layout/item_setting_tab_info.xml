@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sstv_tab_name"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_30"
+    android:gravity="center"
+    android:text="tab"
+    android:textStyle="bold"
+    android:textSize="@dimen/sp_8"
+    app:normalRadiusT="@dimen/dp_4"
+    app:normalSolidColorT="@color/color_e3e9f5"
+    app:selectRadiusT="@dimen/dp_4"
+    app:selectSolidColorT="@color/color_0087FA"
+    app:shapeNormalColor="@color/color_666666"
+    app:shapeSelect="false"
+    app:shapeSelectColor="@color/white">
+
+</com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView>

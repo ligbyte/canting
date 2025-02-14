@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_35"
+        android:paddingTop="@dimen/dp_15"
+        android:background="@drawable/shape_main_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/icon_status_error" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="上传失败"
+            android:textColor="@color/color_FF515D"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/dp_5"
+            android:text="请检查人脸是否清晰\n请检查人脸是否在框内\n请确保五官露出，无遮挡"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_11" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_retry_camera"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_23"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="重新拍照"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            app:radiusT="@dimen/dp_4"
+            app:solidColorT="@color/color_1890FF" />
+    </LinearLayout>
+
+</FrameLayout>

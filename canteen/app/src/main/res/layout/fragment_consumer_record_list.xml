@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:solidColorT="@color/white"
+    app:radiusT="@dimen/dp_5">
+
+    <!-- 账单标题 -->
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_11"
+        app:solidColorT="@color/color_C7E3FF"
+        app:topLeftRadiusT="@dimen/dp_5"
+        app:topRightRadiusT="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="用户"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_9"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="金额"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_9"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="状态"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_9"
+            android:textStyle="bold" />
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+    <!-- 订单列表 -->
+    <com.stkj.cashier.base.ui.widget.AppSmartRefreshLayout
+        android:id="@+id/srl_record_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_30">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.stkj.cashier.base.ui.widget.AppSmartRefreshLayout>
+</com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>

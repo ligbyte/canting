@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_23"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:radiusT="@dimen/dp_23"
+        app:strokeColorT="@color/color_eeeeee"
+        app:strokeWidthT="@dimen/dp_1">
+
+        <ImageView
+            android:layout_width="@dimen/dp_9"
+            android:layout_height="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@mipmap/icon_search" />
+
+        <com.stkj.supermarket.base.ui.widget.CommonActionDoneEditText
+            android:id="@+id/et_goods_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入商品编码/名称/首字母"
+            android:paddingLeft="@dimen/dp_5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_999999"
+            android:textSize="@dimen/sp_8" />
+
+        <ImageView
+            android:id="@+id/iv_clear_search"
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            android:layout_marginRight="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:src="@mipmap/icon_close_circle"
+            android:visibility="gone" />
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeRecyclerView
+        android:id="@+id/rv_search_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:fadeScrollbars="false"
+        android:padding="@dimen/dp_5"
+        android:scrollbarSize="@dimen/dp_2"
+        android:scrollbarThumbVertical="@drawable/shape_common_scroll_bar_style"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:radiusT="@dimen/dp_4"
+        app:solidColorT="@color/white"
+        app:strokeColorT="@color/color_D2E9FF"
+        app:strokeWidthT="@dimen/dp_0_5" />
+
+</LinearLayout>

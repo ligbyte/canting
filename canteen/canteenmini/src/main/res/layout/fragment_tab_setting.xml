@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sv_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_11">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号信息:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_13" />
+
+        <!-- 账号信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_11"
+                android:singleLine="true"
+                android:text="账户名"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_13" />
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/stv_change_user"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击切换账号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelect="true"
+                app:shapeSelectColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="服务器地址:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_13" />
+
+        <!-- 服务器地址 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_server_address"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_11"
+                android:layout_weight="1">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeEditText
+                    android:id="@+id/set_server_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_13"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_server_address"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="right"
+                    android:paddingLeft="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_confirm_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="确认重启软件"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:radiusT="@dimen/dp_10"
+                app:solidColorT="@color/color_0087FA" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="崩溃日志:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_13" />
+
+        <!-- 日志信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/stv_export_crash_log"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="导出崩溃日志"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelect="true"
+                app:shapeSelectColor="@color/white" />
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/stv_clear_crash_log"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="清理崩溃日志"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelect="true"
+                app:shapeSelectColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

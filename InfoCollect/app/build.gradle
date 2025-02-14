@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+    id 'org.greenrobot.greendao'
+}
+
+//当前编译的flavor
+def currentFlavor = "defaultDevice"
+task initCurrentFlavor(dependsOn: sourceSets) {
+    def taskRequest = gradle.getStartParameter().getTaskRequests().toString().toLowerCase()
+    if (taskRequest.toUpperCase().contains("4734404S501262")) {
+        currentFlavor = "sn_4734404S501262"
+    }
+    println("当前构建的设备为： " + currentFlavor)
+}
+
+//编译后apk名字携带信息(commitId + date)
+def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+if (gitSha.isEmpty()) {
+    gitSha = 'git rev-parse --short HEAD'.execute().text.trim()
+}
+def buildDate = new Date().format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+08:00"))
+
+android {
+    namespace 'com.stkj.infocollect'
+    compileSdk rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.stkj.infocollect"
+        minSdk rootProject.minSdkVersion
+        targetSdk 29
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "GIT_SHA", "\"" + gitSha + "\""
+        buildConfigField "String", "BUILD_TIME", "\"" + buildDate + "\""
+        buildConfigField "String", "deviceType", "\"infocollect\""
+    }
+
+    signingConfigs {
+        defaultDevice {
+            keyAlias 'infocollect'
+            keyPassword '123456'
+            storeFile file('keystore')
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.defaultDevice
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android.buildFeatures.buildConfig true
+
+    flavorDimensions = ["device"]
+    productFlavors {
+        sn_4734404S501262 {
+            dimension "device"
+            buildConfigField('String', 'machineNumber', '\"4734404S501262\"')
+            signingConfig signingConfigs.defaultDevice
+        }
+        defaultDevice {
+            dimension "device"
+            buildConfigField('String', 'machineNumber', '\"0123456789\"')
+            signingConfig signingConfigs.defaultDevice
+        }
+    }
+
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "stkjinfocollect_v${variant.versionName}_${variant.buildType.name}_${gitSha}.apk"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    //other dependencies
+
+    //-------------- 模块依赖library --------------
+    //基础通用模块
+    api project(path: ':common')
+    //旷视人脸识别
+    implementation project(path: ':cbgfacefass')
+
+    //不同设备不同实现
+    if ("sn_4734404S501262" == currentFlavor) {
+        implementation project(path: ':sn_4734404S501262')
+    }
+
+    //调试相关
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+greendao {
+    schemaVersion 1 // 数据库版本号
+    daoPackage 'com.stkj.infocollect.base.greendao.generate'  // 设置 DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'  // 设置 DaoMaster、DaoSession、Dao 目录
+}

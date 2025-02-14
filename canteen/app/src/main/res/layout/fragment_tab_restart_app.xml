@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingTop="@dimen/dp_11"
+    android:paddingRight="@dimen/dp_18"
+    android:paddingBottom="@dimen/dp_11"
+    app:radiusT="@dimen/dp_5"
+    app:solidColorT="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重启软件"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8"
+        android:textStyle="bold" />
+
+    <!-- 设备重启 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="设备重启:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_device_restart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击重启"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_device_shutdown"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击关机"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 软件重启 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="软件重启:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_app_restart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击重启"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 导航栏显示隐藏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="底部导航栏:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_show_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击显示"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_hide_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击隐藏"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+</com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>

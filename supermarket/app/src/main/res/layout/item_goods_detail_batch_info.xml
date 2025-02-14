@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_11"
+    android:paddingRight="@dimen/dp_11"
+    android:layout_marginBottom="@dimen/dp_9">
+
+    <!-- 左侧批次商品信息 -->
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_0_5"
+        app:bottomLeftRadiusT="@dimen/dp_4"
+        app:strokeColorT="@color/color_E8EAED"
+        app:strokeWidthT="@dimen/dp_0_5"
+        app:topLeftRadiusT="@dimen/dp_4">
+
+        <!-- 商品批次 -->
+        <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:line_bottom="true"
+            app:line_color="@color/color_E8EAED"
+            app:line_width="@dimen/dp_0_5">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="商品批次"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_batch_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+        <!-- 入库时间 -->
+        <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:line_bottom="true"
+            app:line_color="@color/color_E8EAED"
+            app:line_width="@dimen/dp_0_5">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="入库时间"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_storage_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+        <!-- 生产日期 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="生产日期"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_product_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </LinearLayout>
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+    <!-- 右侧批次商品信息 -->
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_0_5"
+        app:bottomRightRadiusT="@dimen/dp_4"
+        app:strokeColorT="@color/color_E8EAED"
+        app:strokeWidthT="@dimen/dp_0_5"
+        app:topRightRadiusT="@dimen/dp_4">
+
+        <!-- 进货价格 -->
+        <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:line_bottom="true"
+            app:line_color="@color/color_E8EAED"
+            app:line_width="@dimen/dp_0_5">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="进货价格"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_init_price"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+        <!-- 进货数量 -->
+        <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:line_bottom="true"
+            app:line_color="@color/color_E8EAED"
+            app:line_width="@dimen/dp_0_5">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="进货数量"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_storage_count"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+        <!-- 保质期 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:layout_width="@dimen/dp_78"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_0_5"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:text="保质期"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_9"
+                android:textStyle="bold"
+                app:solidColorT="@color/color_F7F9FA"
+                app:topLeftRadiusT="@dimen/dp_4" />
+
+            <TextView
+                android:id="@+id/tv_goods_expire_days"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+        </LinearLayout>
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+</LinearLayout>

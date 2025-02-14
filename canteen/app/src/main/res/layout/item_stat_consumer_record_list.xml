@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.linelayout.LineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_32"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/selector_item_sale_list"
+    app:line_bottom="true"
+    app:line_color="@color/color_EDF0F5"
+    app:line_width="@dimen/dp_0_5">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="姓名"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="账号"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_fee_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="餐别"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="金额"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_pay_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="支付方式"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="时间"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+</com.stkj.common.ui.widget.linelayout.LineLinearLayout>

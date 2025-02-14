@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_main_bg">
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+            android:layout_width="@dimen/dp_348"
+            android:layout_height="match_parent"
+            app:radiusT="@dimen/dp_5"
+            app:solidColorT="@color/white">
+
+            <!-- 商品库标题 -->
+            <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginRight="@dimen/dp_11"
+                android:gravity="center_vertical"
+                app:radiusT="@dimen/dp_5"
+                app:solidColorT="@color/color_D3EAFF">
+
+                <ImageView
+                    android:id="@+id/iv_goods_select_all"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:src="@drawable/selector_goods_inventory_all" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_87"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="商品信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_9"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="wrap_content"
+                    android:text="库存"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_9"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="wrap_content"
+                    android:text="售价"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_9"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/dp_85"
+                    android:layout_height="wrap_content"
+                    android:text="进货价(元)"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_9"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="数量"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_9"
+                    android:textStyle="bold" />
+
+            </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+            <!-- 商品库列表和空白布局 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_75"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingRight="@dimen/dp_11">
+
+                <LinearLayout
+                    android:id="@+id/ll_inventory_list_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+                        android:src="@mipmap/icon_save_storage_empty" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暂无商品 请先扫描需入库的商品"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/sp_9" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="注意：首次入库需完成【新增商品】操作"
+                        android:textColor="@color/color_FF7373"
+                        android:textSize="@dimen/sp_7" />
+                </LinearLayout>
+
+                <!-- 商品库列表 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_goods_inventory_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </FrameLayout>
+
+            <!-- 搜索标题 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_11"
+                android:orientation="horizontal">
+
+                <com.stkj.supermarket.goods.ui.widget.GoodsAutoSearchLayout
+                    android:id="@+id/goods_auto_search"
+                    android:layout_width="@dimen/dp_173"
+                    android:layout_height="match_parent" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_23"
+                    android:layout_weight="1" />
+
+                <!-- 新增商品 -->
+                <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+                    android:id="@+id/sll_goods_add"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_23"
+                    android:gravity="center"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_0087FA"
+                    app:strokeWidthT="@dimen/dp_0_5">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_8"
+                        android:src="@mipmap/icon_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:text="新增商品"
+                        android:textColor="@color/color_259AFE"
+                        android:textSize="@dimen/sp_8"
+                        android:textStyle="bold" />
+                </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:orientation="vertical"
+            app:radiusT="@dimen/dp_6"
+            app:solidColorT="@color/white">
+
+            <!-- 已选择商品金额 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_selected_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="已选择"
+                    android:textColor="@color/color_010101"
+                    android:textSize="@dimen/sp_11"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_selected_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/color_FF3C30"
+                    android:textSize="@dimen/sp_11"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!--  选择入库商品列表 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_goods_storage_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_14"
+                android:layout_weight="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.42"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/color_0087FA"
+                    android:textSize="@dimen/sp_11"
+                    android:textStyle="bold"
+                    app:radiusT="@dimen/dp_4"
+                    app:solidColorT="@color/white"
+                    app:strokeColorT="@color/color_0087FA"
+                    app:strokeWidthT="@dimen/dp_1" />
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_save_storage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_weight="0.58"
+                    android:gravity="center"
+                    android:text="确认入库"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/sp_11"
+                    android:textStyle="bold"
+                    app:radiusT="@dimen/dp_4"
+                    app:solidColorT="@color/color_F1F2F4" />
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+    </LinearLayout>
+</FrameLayout>

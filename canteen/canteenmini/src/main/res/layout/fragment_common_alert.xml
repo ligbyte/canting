@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_88000000"
+    android:clickable="true">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_35"
+        android:layout_marginRight="@dimen/dp_35"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_25"
+        app:radiusT="@dimen/dp_5"
+        app:solidColorT="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="right"
+                android:padding="@dimen/dp_9"
+                android:src="@mipmap/icon_dialog_close" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_11"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:text="标题"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <!-- 自定义内容 -->
+        <FrameLayout
+            android:id="@+id/fl_alert_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingRight="@dimen/dp_30">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_left_bt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:radiusT="@dimen/dp_4"
+                app:solidColorT="@color/color_0087FA" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_right_bt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color_151619"
+                android:textSize="@dimen/sp_13"
+                app:radiusT="@dimen/dp_4"
+                app:solidColorT="@color/color_F1F2F4" />
+
+        </LinearLayout>
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+</FrameLayout>

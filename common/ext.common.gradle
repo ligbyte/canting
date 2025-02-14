@@ -1,0 +1,43 @@
+ext {
+    //android编译
+    compileSdkVersion = 34
+    minSdkVersion = 24
+    targetSdkVersion = 30
+    kotlinbomVersion = '1.8.10'
+
+    //官方库
+    appcompatVesion = '1.6.1'
+    constraintLayVersion = '2.1.4'
+    materialVersion = '1.11.0'
+    recyclerViewVersion = '1.3.2'
+    media3Version = '1.3.1'
+    cameraXVersion = "1.3.3"
+
+    //第三方库
+    rxjavaVersion = '3.1.6'
+    rxandroidVerison = '3.0.2'
+    rxBindingVersion = '4.0.0'
+    autodisposeVersion = '2.1.1'
+    okhttpVerison = '3.14.9'
+    retrofitVersion = '2.9.0'
+    glideVerison = '4.15.0'
+    eventBusVersion = '3.3.1'
+    greenDaoVersion = '3.3.0'
+    greenDaoUpgradeVersion = '2.2.1'
+    permissionXVersion = '1.7.1'
+    mmkvVersion = '1.2.8'
+    lubanVersion = '1.1.8'
+    tinypinyinVerison = '2.0.3'
+    lottieVersion = "5.2.0"
+    smartRefreshVersion = '2.0.5'
+    serialportVersion = '2.1.1'
+    cameraViewVersion = '2.7.2'
+    processPhoenixVersion = '3.0.0'
+    xCrashVersion = '3.1.0'
+    arityVersion = '2.1.7'
+    mathLibraryVersion = '1.1.6'
+    zxingliteVersion = "3.1.1"
+    mpchartVersion = "3.1.0"
+    xLogVersion = "1.11.0"
+    ucropVersion = "2.2.9"
+}

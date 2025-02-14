@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_35"
+        android:background="@drawable/shape_main_bg">
+
+        <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:line_color="@color/color_d8d8d8"
+            app:line_right="true"
+            app:line_width="@dimen/dp_0_5">
+
+            <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:line_color="@color/color_d8d8d8"
+                app:line_top="true"
+                app:line_width="@dimen/dp_0_5">
+
+                <ImageView
+                    android:id="@+id/iv_back_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:paddingLeft="@dimen/dp_25"
+                    android:src="@mipmap/icon_back_setting" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_13" />
+            </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+            <!-- 左侧tab切换 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_left_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+        <com.stkj.common.ui.widget.linelayout.LineFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_128"
+            app:line_color="@color/color_d8d8d8"
+            app:line_top="true"
+            app:line_width="@dimen/dp_0_5">
+
+            <!-- 底部页面切换 -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp2_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 占位页面 -->
+            <FrameLayout
+                android:id="@+id/fl_setting_second_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.stkj.common.ui.widget.linelayout.LineFrameLayout>
+    </FrameLayout>
+
+</FrameLayout>

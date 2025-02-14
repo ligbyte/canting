@@ -1,0 +1,42 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://jitpack.io" }
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+rootProject.name = "supermarket"
+include ':app'
+include ':supermarketmini'
+include ':common'
+project(':common').projectDir = new File('../common')
+include ':cbgfacefass'
+project(':cbgfacefass').projectDir = new File('../cbgfacefass')
+include ':deviceinterface'
+project(':deviceinterface').projectDir = new File('../deviceinterface')
+include ':maibaole_rk3568'
+project(':maibaole_rk3568').projectDir = new File('../maibaole_rk3568')
+include ':maibaole_rk3399'
+project(':maibaole_rk3399').projectDir = new File('../maibaole_rk3399')
+include ':telpo_d2'
+project(':telpo_d2').projectDir = new File('../telpo_d2')
+include ':telpo_c50a'
+project(':telpo_c50a').projectDir = new File('../telpo_c50a')
+include ':telpo_c50a_pro'
+project(':telpo_c50a_pro').projectDir = new File('../telpo_c50a_pro')

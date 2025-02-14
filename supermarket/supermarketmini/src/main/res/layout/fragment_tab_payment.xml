@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_55">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/ll_order_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:src="@mipmap/icon_save_storage_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无商品 请先扫描需支付的商品"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:text="快速收银"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <!-- 快速收银 -->
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_scan"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_30"
+                android:gravity="center"
+                android:text="扫一扫"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:radiusT="@dimen/dp_4"
+                app:solidColorT="@color/color_0087FA" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 底部结算信息 -->
+    <com.stkj.common.ui.widget.linelayout.LineFrameLayout
+        android:id="@+id/fl_go_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_gravity="bottom"
+        android:paddingLeft="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_11"
+        android:visibility="gone"
+        app:line_color="@color/color_EDF0F5"
+        app:line_top="true"
+        app:line_width="@dimen/dp_1">
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_go_to_pay"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="center"
+            android:text="立即结算"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13"
+            app:radiusT="@dimen/dp_4"
+            app:solidColorT="@color/color_0087FA" />
+
+        <TextView
+            android:id="@+id/order_all_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp_12" />
+
+    </com.stkj.common.ui.widget.linelayout.LineFrameLayout>
+
+    <com.stkj.supermarketmini.goods.ui.weight.GoodsAutoSearchLayout
+        android:id="@+id/gsl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:gasl_search_right_margin="@dimen/dp_80" />
+
+    <ImageView
+        android:id="@+id/iv_scan"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_55"
+        android:layout_gravity="right"
+        android:padding="@dimen/dp_6"
+        android:src="@mipmap/icon_scan_gray" />
+
+    <ImageView
+        android:id="@+id/iv_history"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_55"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_40"
+        android:padding="@dimen/dp_6"
+        android:src="@mipmap/icon_order_history" />
+
+</FrameLayout>

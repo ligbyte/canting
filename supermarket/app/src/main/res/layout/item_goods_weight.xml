@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectRatioLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rfl_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:normalRadiusT="@dimen/dp_4"
+    app:normalSolidColorT="@color/color_D3EAFF"
+    app:selectRadiusT="@dimen/dp_4"
+    app:selectSolidColorT="@color/color_0087FA">
+
+    <TextView
+        android:id="@+id/sstv_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:singleLine="true"
+        android:text="称重商品"
+        android:textColor="@color/selector_color_weight_goods"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/sstv_goods_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:singleLine="true"
+        android:text="价格"
+        android:textColor="@color/selector_color_weight_goods"
+        android:textSize="@dimen/sp_11" />
+</com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectRatioLinearLayout>

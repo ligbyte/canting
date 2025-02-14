@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <!-- 商品标题 -->
+    <com.stkj.common.ui.widget.linelayout.LineLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:line_bottom="true"
+        app:line_color="@color/color_EDF0F5"
+        app:line_width="@dimen/dp_1">
+
+        <ImageView
+            android:id="@+id/iv_goods_detail_back"
+            android:layout_width="@dimen/dp_37"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_6"
+            android:src="@mipmap/icon_back_arrow" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="商品详情"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_edit_goods"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_11"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/color_259AFE"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:radiusT="@dimen/dp_4"
+            app:strokeColorT="@color/color_0087FA"
+            app:strokeWidthT="@dimen/dp_0_5" />
+
+    </com.stkj.common.ui.widget.linelayout.LineLinearLayout>
+
+    <!-- 商品详情内容 -->
+    <com.stkj.supermarketmini.base.ui.widget.AppSmartRefreshLayout
+        android:id="@+id/srl_goods_detail_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_goods_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_11"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.stkj.supermarketmini.base.ui.widget.AppSmartRefreshLayout>
+
+</LinearLayout>

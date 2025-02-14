@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingTop="@dimen/dp_11"
+    android:paddingRight="@dimen/dp_18"
+    android:paddingBottom="@dimen/dp_11"
+    app:radiusT="@dimen/dp_5"
+    app:solidColorT="@color/white">
+
+    <!-- 人脸设置 -->
+    <LinearLayout
+        android:id="@+id/ll_face_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人脸识别设置"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 人脸识别阈值设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:text="人脸识别阈值设置:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_facepass_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_10"
+                app:solidColorT="@color/color_0087FA" />
+        </LinearLayout>
+
+        <!-- 本机人脸数据 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:text="本机人脸数据:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <TextView
+                android:id="@+id/stv_facepass_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:singleLine="true"
+                android:text="--人已入库"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8" />
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/sstv_facepass_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击查看详情"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelectColor="@color/white" />
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/sstv_facepass_del_all"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="删除人脸库"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelectColor="@color/white" />
+
+            <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                android:id="@+id/sstv_facepass_update"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="全量更新人脸库"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:normalRadiusT="@dimen/dp_10"
+                app:normalSolidColorT="@color/color_e3e9f5"
+                app:selectRadiusT="@dimen/dp_10"
+                app:selectSolidColorT="@color/color_0087FA"
+                app:shapeNormalColor="@color/color_666666"
+                app:shapeSelectColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/iv_face_pass_loading"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:indeterminateTint="@color/color_0085CF"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:id="@+id/tv_face_pass_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="正在更新"
+                android:textColor="@color/color_171717"
+                android:textSize="@dimen/dp_7" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_face_data_back"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_12"
+        android:scaleType="fitStart"
+        android:src="@mipmap/icon_back_arrow"
+        android:visibility="gone" />
+
+    <!-- 人脸数据列表 -->
+    <LinearLayout
+        android:id="@+id/ll_face_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="本机人脸信息"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_13"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:radiusT="@dimen/dp_4"
+            app:solidColorT="@color/color_F7F9FB">
+
+            <!-- 全部人员 -->
+            <FrameLayout
+                android:id="@+id/fl_all_people"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="0.3">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_all_people"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_all_people"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+            <!-- 全部部门 -->
+            <FrameLayout
+                android:id="@+id/fl_all_department"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:layout_weight="0.3">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_all_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_all_department"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+            <!-- 搜索姓名卡号 -->
+            <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                app:radiusT="@dimen/dp_4"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5">
+
+                <EditText
+                    android:id="@+id/et_people_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:background="@null"
+                    android:hint="输入姓名或卡号"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8" />
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/tv_people_search"
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="查询"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_8"
+                    app:bottomRightRadiusT="@dimen/dp_4"
+                    app:solidColorT="@color/color_3489F5"
+                    app:topRightRadiusT="@dimen/dp_4" />
+
+            </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_18"
+            android:paddingRight="@dimen/dp_18"
+            app:radiusT="@dimen/dp_4"
+            app:solidColorT="@color/color_F4F8FC">
+
+            <TextView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="姓名"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="账号"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="账号类别"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="部门"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="人脸照片"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="最后一次同步时间"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="入库状态"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+        <!-- 人脸库列表 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.stkj.cashier.base.ui.widget.AppSmartRefreshLayout
+                android:id="@+id/srl_face_pass_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_face_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </com.stkj.cashier.base.ui.widget.AppSmartRefreshLayout>
+
+            <TextView
+                android:id="@+id/tv_face_pass_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="无数据"
+                android:textSize="@dimen/sp_9" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>

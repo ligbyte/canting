@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.linelayout.LineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:background="@drawable/selector_item_sale_list"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:line_bottom="true"
+    app:line_color="@color/color_EDF0F5"
+    app:line_width="@dimen/dp_0_5"
+    app:line_bottom_margin="@dimen/dp_10">
+
+    <!-- 用户名、手机号 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="手机号"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- 金额 -->
+    <TextView
+        android:id="@+id/tv_pay_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ellipsize="marquee"
+        android:layout_marginTop="@dimen/dp_5"
+        android:singleLine="true"
+        android:text="¥ 0.00"
+        android:paddingLeft="5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_8"
+        android:textStyle="bold" />
+
+    <!-- 支付状态 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- 支付状态 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_pay_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="支付成功"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+                android:id="@+id/sll_pay_wait"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_16"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:radiusT="@dimen/dp_4"
+                app:solidColorT="@color/color_fff2f2">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeView
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_4"
+                    app:circleRadiusT="@dimen/dp_2"
+                    app:solidColorT="@color/color_FF3C30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待支付"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:textColor="@color/color_FF3C30"
+                    android:textSize="@dimen/sp_8"
+                    android:textStyle="bold" />
+
+            </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+        </FrameLayout>
+
+        <!-- 支付时间 -->
+        <TextView
+            android:id="@+id/tv_pay_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="支付时间"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.stkj.common.ui.widget.linelayout.LineLinearLayout>

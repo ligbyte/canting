@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonSeekProgressBar">
+        <attr name="cspb_progress" format="integer" />
+        <attr name="cspb_max_progress" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CropOverLayerView">
+        <attr name="colv_crop_width" format="dimension" />
+        <attr name="colv_crop_height" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CardAccountInfoLayout">
+        <attr name="cail_can_edit" format="boolean" />
+    </declare-styleable>
+</resources>

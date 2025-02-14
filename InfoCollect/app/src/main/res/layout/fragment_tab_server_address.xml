@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingTop="@dimen/dp_15"
+    android:paddingRight="@dimen/dp_18"
+    android:paddingBottom="@dimen/dp_15">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP地址配置"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8"
+        android:textStyle="bold" />
+
+    <!-- 服务器地址 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="服务器地址:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <FrameLayout
+            android:id="@+id/fl_server_address"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeEditText
+                android:id="@+id/set_server_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_4"
+                app:solidColorT="@color/white"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5" />
+
+            <ImageView
+                android:id="@+id/iv_server_address"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="right"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_5_5"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_5_5"
+                android:src="@drawable/selector_expand_arrow" />
+        </FrameLayout>
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_confirm_restart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="确认重启软件"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 心跳间隔 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="心跳间隔:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <FrameLayout
+            android:id="@+id/fl_heartbeat_interval"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11">
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_heartbeat_interval"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingLeft="@dimen/dp_6"
+                android:paddingRight="@dimen/dp_6"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/sp_8"
+                app:solidColorT="@color/white"
+                app:radiusT="@dimen/dp_4"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5" />
+
+            <ImageView
+                android:id="@+id/iv_heartbeat_interval"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="right"
+                android:paddingTop="@dimen/dp_5_5"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_5_5"
+                android:src="@drawable/selector_expand_arrow" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络环境监控"
+        android:textColor="@color/color_171717"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textSize="@dimen/sp_8"
+        android:textStyle="bold" />
+
+    <!-- 网络检测开关 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络健康检查: "
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <ImageView
+            android:id="@+id/iv_switch_health_check"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:src="@drawable/selector_switch" />
+    </LinearLayout>
+
+</LinearLayout>

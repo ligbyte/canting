@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        app:radiusT="@dimen/dp_4"
+        app:solidColorT="@color/white"
+        app:strokeColorT="@color/color_EDF0F5"
+        app:strokeWidthT="@dimen/dp_1">
+
+        <ImageView
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_money_unit" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_consume"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25">
+
+            <TextView
+                android:id="@+id/tv_consume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:hint="请输入消费金额"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_e7e7e7"
+                android:textSize="@dimen/sp_19"
+                android:textStyle="bold" />
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:src="@mipmap/icon_clear" />
+
+        <TextView
+            android:id="@+id/tv_operate_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10" />
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stv_num1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/sfl_del"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="3"
+            android:background="@drawable/selector_item_calc">
+
+            <ImageView
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_calc_del" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stv_num4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/sfl_plus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="3"
+            android:background="@drawable/selector_item_calc">
+
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_calc_plus" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stv_num7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_num9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="2"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/sfl_minus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="3"
+            android:background="@drawable/selector_item_calc">
+
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_calc_minus" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stv_num0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stv_spot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="0.22"
+            android:background="@drawable/selector_item_calc"
+            android:gravity="center"
+            android:text="."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="0.56"
+            android:background="@drawable/selector_item_calc_confirm"
+            android:gravity="center"
+            android:text="确认金额"
+            android:textColor="@color/selector_calc_item_confirm"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

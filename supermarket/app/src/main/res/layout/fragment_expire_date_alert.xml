@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_34"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeEditText
+        android:id="@+id/set_goods_expire_date"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_19"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_11"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="请输入"
+        android:inputType="numberDecimal"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingRight="@dimen/dp_6"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/sp_8"
+        app:radiusT="@dimen/dp_4"
+        app:strokeColorT="@color/color_E8EAED"
+        app:strokeWidthT="@dimen/dp_0_5" />
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+        android:id="@+id/fl_goods_expire_date"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_19"
+        app:radiusT="@dimen/dp_4"
+        app:strokeColorT="@color/color_E8EAED"
+        app:strokeWidthT="@dimen/dp_0_5">
+
+        <TextView
+            android:id="@+id/stv_expire_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="@dimen/dp_16"
+            android:text="天"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8" />
+
+        <ImageView
+            android:id="@+id/iv_goods_expire_date_arrow"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_19"
+            android:layout_gravity="right"
+            android:paddingTop="@dimen/dp_5_5"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_5_5"
+            android:src="@drawable/selector_expand_arrow" />
+    </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+</LinearLayout>

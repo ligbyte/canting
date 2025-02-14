@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_upload_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/icon_upload_pic_default" />
+
+    <ImageView
+        android:id="@+id/iv_upload_del"
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:layout_gravity="right"
+        android:src="@mipmap/icon_upload_pic_del"
+        android:visibility="gone" />
+</FrameLayout>

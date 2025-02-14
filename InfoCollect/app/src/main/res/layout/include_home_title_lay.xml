@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- 餐厅icon -->
+    <ImageView
+        android:id="@+id/iv_canteen_logo"
+        android:layout_width="@dimen/dp_17"
+        android:layout_height="@dimen/dp_17"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:src="@mipmap/icon_canteen" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:text="慧餐宝"
+        android:textColor="@color/color_317FFF"
+        android:textSize="@dimen/sp_11"
+        android:textStyle="bold" />
+
+    <!-- 右侧系统日期等信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|right">
+
+        <TextView
+            android:id="@+id/tv_sys_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="12-01 15:00"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_sys_wifi"
+            android:layout_width="@dimen/dp_13"
+            android:layout_height="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:src="@mipmap/icon_wifi_level3" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_10">
+
+            <ProgressBar
+                android:id="@+id/pb_battery"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:max="100"
+                android:paddingLeft="@dimen/dp_5_5"
+                android:paddingRight="@dimen/dp_6_5"
+                android:progress="100"
+                android:progressDrawable="@drawable/battery_pro_bar_default" />
+
+            <ImageView
+                android:id="@+id/iv_battery_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/icon_battery_default" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

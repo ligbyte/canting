@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:radiusT="@dimen/dp_4"
+    app:solidColorT="@color/white"
+    app:strokeColorT="@color/color_EDF0F5"
+    app:strokeWidthT="@dimen/dp_1">
+
+    <com.stkj.common.ui.widget.ratiolayout.RatioImageView
+        android:id="@+id/riv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_food_default"
+        app:ratio_w_h="1.3" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_15"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="菜品"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_8" />
+
+</com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>

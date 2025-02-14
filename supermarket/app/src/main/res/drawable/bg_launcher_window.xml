@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_main_bg" />
+
+    <item
+        android:width="@dimen/dp_96"
+        android:height="@dimen/dp_32"
+        android:bottom="@dimen/dp_64"
+        android:drawable="@mipmap/icon_supermarket_label"
+        android:gravity="center" />
+</layer-list>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.linelayout.LineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_80"
+    android:background="@drawable/selector_item_sale_list"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:line_bottom="true"
+    app:line_color="@color/color_EDF0F5"
+    app:line_width="@dimen/dp_1">
+
+    <!-- 商品图片 名字 规格 -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_80"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_goods_pic"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_goods_default" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="商品名称"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <!-- 商品条码 -->
+            <TextView
+                android:id="@+id/tv_goods_qrcode"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:layout_gravity="center_vertical"
+                android:text="商品条码"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_goods_specs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:ellipsize="marquee"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="规格:xx"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_11" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!-- 售价 -->
+    <LinearLayout
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="现价"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <com.stkj.common.ui.widget.common.StrikeThruTextView
+                android:id="@+id/tv_goods_origin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="原价"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/tv_goods_discount_tag1"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_25"
+                android:src="@mipmap/icon_tag_zhijiang"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/tv_goods_discount_tag2"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_1"
+                android:src="@mipmap/icon_tag_manjian"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 库存 -->
+    <TextView
+        android:id="@+id/tv_goods_inventory"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="库存"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <!-- 保质期 -->
+    <TextView
+        android:id="@+id/tv_goods_expire_day"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="保质期"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+</com.stkj.common.ui.widget.linelayout.LineLinearLayout>

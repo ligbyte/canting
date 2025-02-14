@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_150"
+    android:paddingBottom="@dimen/dp_5">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeRecyclerView
+        android:id="@+id/rv_weight_goods_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="@dimen/dp_2"
+        android:scrollbarThumbVertical="@drawable/shape_common_scroll_bar_style"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:radiusT="@dimen/dp_4"
+        app:solidColorT="@color/white"
+        app:strokeColorT="@color/color_EDF0F5"
+        app:strokeWidthT="@dimen/dp_0_5">
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeRecyclerView>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:gravity="center"
+        android:text="无搜索结果"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_9"
+        android:visibility="gone" />
+</FrameLayout>

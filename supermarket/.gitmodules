@@ -1,0 +1,24 @@
+[submodule "common"]
+	path = ../common
+	url = ../common.git
+[submodule "cbgfacefass"]
+	path = ../cbgfacefass
+	url = ../cbgfacefass.git
+[submodule "deviceinterface"]
+	path = ../deviceinterface
+	url = ../deviceinterface.git
+[submodule "maibaole_rk3568"]
+	path = ../maibaole_rk3568
+	url = ../maibaole_rk3568.git
+[submodule "maibaole_rk3399"]
+	path = ../maibaole_rk3399
+	url = ../maibaole_rk3399.git
+[submodule "telpo_c50a"]
+	path = ../telpo_c50a
+	url = ../telpo_c50a.git
+[submodule "telpo_c50a_pro"]
+	path = ../telpo_c50a_pro
+	url = ../telpo_c50a_pro.git
+[submodule "telpo_d2"]
+	path = ../telpo_d2
+	url = ../telpo_d2.git

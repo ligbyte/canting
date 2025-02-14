@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_11"
+        app:radiusT="@dimen/dp_5"
+        app:solidColorT="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="外接设备情况"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 设备1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:text="设备 1 :"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <FrameLayout
+                android:id="@+id/fl_device1"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_device1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_device1"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 设备2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:text="设备 2 :"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <FrameLayout
+                android:id="@+id/fl_device2"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_device2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_device2"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 设备3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:text="设备 3 :"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <FrameLayout
+                android:id="@+id/fl_device3"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_device3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_device3"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 是否允许现金 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否允许现金支付: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_cashier_pay"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+<!--        &lt;!&ndash; 是否允许整单改价 &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_switch_change_order_price"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_11"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="是否允许整单改价: "-->
+<!--                android:textColor="@color/color_666666"-->
+<!--                android:textSize="@dimen/sp_8" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_switch_change_order_price"-->
+<!--                android:layout_width="@dimen/dp_25"-->
+<!--                android:layout_height="@dimen/dp_20"-->
+<!--                android:layout_marginLeft="@dimen/dp_5"-->
+<!--                android:src="@drawable/selector_switch" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; 是否抹角 &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_switch_mo_jiao"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_11"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="是否允许抹角: "-->
+<!--                android:textColor="@color/color_666666"-->
+<!--                android:textSize="@dimen/sp_8" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_switch_mo_jiao"-->
+<!--                android:layout_width="@dimen/dp_25"-->
+<!--                android:layout_height="@dimen/dp_20"-->
+<!--                android:layout_marginLeft="@dimen/dp_5"-->
+<!--                android:src="@drawable/selector_switch" />-->
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; 是否抹分 &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_switch_mo_fen"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/dp_11"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="是否允许金额抹分: "-->
+<!--                android:textColor="@color/color_666666"-->
+<!--                android:textSize="@dimen/sp_8" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_switch_mo_fen"-->
+<!--                android:layout_width="@dimen/dp_25"-->
+<!--                android:layout_height="@dimen/dp_20"-->
+<!--                android:layout_marginLeft="@dimen/dp_5"-->
+<!--                android:src="@drawable/selector_switch" />-->
+<!--        </LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/color_EDF0F5" />
+
+        <!-- 通联支付设置 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="通联支付设置"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 聚合支付开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="支付开关: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_tonglian_pay"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+</ScrollView>

@@ -1,0 +1,160 @@
+plugins {
+    id 'com.android.library'
+    id 'org.greenrobot.greendao'
+}
+
+android {
+    namespace 'com.stkj.common'
+    compileSdk rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles "consumer-rules.pro"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    //kotlin-bom
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:${rootProject.kotlinbomVersion}"))
+    //google官方库
+    api "androidx.appcompat:appcompat:${rootProject.appcompatVesion}"
+    api "androidx.constraintlayout:constraintlayout:${rootProject.constraintLayVersion}"
+    api "com.google.android.material:material:${rootProject.materialVersion}"
+    api "androidx.recyclerview:recyclerview:${rootProject.recyclerViewVersion}"
+
+    //rx系列
+    api "io.reactivex.rxjava3:rxjava:${rootProject.rxjavaVersion}"
+    api "io.reactivex.rxjava3:rxandroid:${rootProject.rxandroidVerison}"
+    api "com.jakewharton.rxbinding4:rxbinding:${rootProject.rxBindingVersion}"
+
+    //rx生命周期解绑库
+    api "com.uber.autodispose2:autodispose:${rootProject.autodisposeVersion}"
+    api "com.uber.autodispose2:autodispose-android:${rootProject.autodisposeVersion}"
+    api "com.uber.autodispose2:autodispose-androidx-lifecycle:${rootProject.autodisposeVersion}"
+
+    //网络请求库
+    api "com.squareup.okhttp3:okhttp:${rootProject.okhttpVerison}"
+    api "com.squareup.okhttp3:logging-interceptor:${rootProject.okhttpVerison}"
+    api "com.squareup.okhttp3:okhttp-tls:${rootProject.okhttpVerison}"
+
+    //网络框架
+    api "com.squareup.retrofit2:retrofit:${rootProject.retrofitVersion}"
+    api "com.squareup.retrofit2:adapter-rxjava3:${rootProject.retrofitVersion}"
+    api "com.squareup.retrofit2:converter-scalars:${rootProject.retrofitVersion}"
+    api "com.squareup.retrofit2:converter-jackson:${rootProject.retrofitVersion}"
+
+    //图片加载库
+    api "com.github.bumptech.glide:glide:${rootProject.glideVerison}"
+    api "com.github.bumptech.glide:okhttp3-integration:${rootProject.glideVerison}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.glideVerison}"
+
+    //事件总线
+    api "org.greenrobot:eventbus:${rootProject.eventBusVersion}"
+
+    //权限申请库
+    api "com.guolindev.permissionx:permissionx:${rootProject.permissionXVersion}"
+
+    //key/value高性能存储
+    api "com.tencent:mmkv-static:${rootProject.mmkvVersion}"
+
+    //图片压缩库
+    api "top.zibin:Luban:${rootProject.lubanVersion}"
+
+    //汉字转拼音
+    api "com.github.promeg:tinypinyin:${rootProject.tinypinyinVerison}"
+    api "com.github.promeg:tinypinyin-lexicons-android-cncity:${rootProject.tinypinyinVerison}"
+
+    //条码/二维码扫描
+    api "com.github.jenly1314:zxing-lite:${rootProject.zxingliteVersion}"
+    //二维码扫描
+//    // OpenCV基础库（*必须）
+//    implementation 'com.github.jenly1314.WeChatQRCode:opencv:2.1.0'
+//    implementation 'com.github.jenly1314.WeChatQRCode:opencv-armv7a:2.1.0'
+//    // OpenCV的其他ABI（可选），根据你的需要选择想要支持的SO库架构
+//    implementation 'com.github.jenly1314.WeChatQRCode:opencv-armv64:2.1.0'
+//    // 微信二维码识别功能（可选）
+//    implementation 'com.github.jenly1314.WeChatQRCode:wechat-qrcode:2.1.0'
+//    // 微信二维码扫码功能（可选）
+//    implementation 'com.github.jenly1314.WeChatQRCode:wechat-qrcode-scanning:2.1.0'
+
+    //lottie动画库
+    api "com.airbnb.android:lottie:${rootProject.lottieVersion}"
+
+    //exoplayer库
+    api "androidx.media3:media3-exoplayer:${rootProject.media3Version}"
+    api "androidx.media3:media3-exoplayer-dash:${rootProject.media3Version}"
+    api "androidx.media3:media3-ui:${rootProject.media3Version}"
+
+    //camerax库
+    api "androidx.camera:camera-core:${rootProject.cameraXVersion}"
+    api "androidx.camera:camera-camera2:${rootProject.cameraXVersion}"
+    // If you want to additionally use the CameraX Lifecycle library
+    api "androidx.camera:camera-lifecycle:${rootProject.cameraXVersion}"
+    // If you want to additionally use the CameraX VideoCapture library
+    api "androidx.camera:camera-video:${rootProject.cameraXVersion}"
+    // If you want to additionally use the CameraX View class
+    api "androidx.camera:camera-view:${rootProject.cameraXVersion}"
+    // If you want to additionally use the CameraX Extensions library
+    api "androidx.camera:camera-extensions:${rootProject.cameraXVersion}"
+
+    //下拉刷新
+    api "io.github.scwang90:refresh-layout-kernel:${rootProject.smartRefreshVersion}"
+    api "io.github.scwang90:refresh-header-two-level:${rootProject.smartRefreshVersion}"
+
+    //数据库
+    api "org.greenrobot:greendao:${rootProject.greenDaoVersion}"
+    //数据库升级
+    api "io.github.yuweiguocn:GreenDaoUpgradeHelper:v${rootProject.greenDaoUpgradeVersion}"
+
+    //cameraView
+    api "com.otaliastudios:cameraview:${rootProject.cameraViewVersion}"
+
+    //process-phoenix(进程重启)
+    api "com.jakewharton:process-phoenix:${rootProject.processPhoenixVersion}"
+
+    //崩溃日志(java+native)
+    api "com.iqiyi.xcrash:xcrash-android-lib:${rootProject.xCrashVersion}"
+
+    //图标库
+    api "com.github.PhilJay:MPAndroidChart:v${rootProject.mpchartVersion}"
+
+    //图片裁剪
+    api "com.github.yalantis:ucrop:${rootProject.ucropVersion}"
+
+    //log日志库
+    api "com.elvishew:xlog:${rootProject.xLogVersion}"
+
+    //数学计算公式计算
+//    api "com.xlythe:math-library:${rootProject.mathLibraryVersion}"
+//    api "com.xlythe:arity:${rootProject.arityVersion}"
+//    api 'org.matheclipse:matheclipse-core:3.0.0'
+
+    //调试相关
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

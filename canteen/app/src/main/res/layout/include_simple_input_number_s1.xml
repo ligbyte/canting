@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+        android:id="@+id/stv_input_number"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:letterSpacing="1"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:radiusT="@dimen/dp_20"
+        app:solidColorT="@color/white"
+        app:strokeColorT="@color/color_D3D8DD"
+        app:strokeWidthT="@dimen/dp_2_5" />
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:orientation="vertical"
+        app:radiusT="@dimen/dp_20"
+        app:solidColorT="@color/white"
+        app:strokeColorT="@color/color_D3D8DD"
+        app:strokeWidthT="@dimen/dp_2_5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tv_number0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="0"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="1"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="2"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="3"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="4"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:orientation="vertical"
+                app:solidColorT="@color/color_e5e5e5"
+                app:topRightRadiusT="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_25"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_9" />
+
+                <TextView
+                    android:id="@+id/tv_del"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_25"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:background="@drawable/selector_delete_number_item"
+                    android:textColor="@color/selector_delete_number_item"
+                    android:textSize="@dimen/sp_9" />
+
+            </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2_5"
+            android:background="@color/color_D3D8DD" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/tv_number5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="5"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="6"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="7"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="8"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_number9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_2_5"
+                android:background="@drawable/selector_input_number_item"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="9"
+                android:textColor="@color/selector_input_number_item"
+                android:textSize="@dimen/sp_14" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_confirm"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_9"
+                app:bottomRightRadiusT="@dimen/dp_20"
+                app:solidColorT="@color/color_0087FA" />
+        </LinearLayout>
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+</LinearLayout>

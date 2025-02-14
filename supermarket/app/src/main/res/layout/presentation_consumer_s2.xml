@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F6F9FC"
+    android:orientation="vertical">
+
+    <com.stkj.supermarket.home.ui.widget.HomeTitleLayout
+        android:id="@+id/htl_consumer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_0087FA"
+        app:isLightMode="true"
+        app:htl_consume_lay_res="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_7"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+            android:id="@+id/sfl_order_list"
+            android:layout_width="@dimen/dp_133"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:radiusT="@dimen/dp_3"
+            app:solidColorT="@color/white">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_33"
+                android:padding="@dimen/dp_7">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_goods_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/ll_fast_pay_presentation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_93"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_fast_pay_presentation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="快速收银中"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/sp_6"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/dp_7"
+                android:paddingRight="@dimen/dp_7"
+                app:bottomLeftRadiusT="@dimen/dp_3"
+                app:bottomRightRadiusT="@dimen/dp_3"
+                app:solidColorT="@color/color_D3EAFF">
+
+                <TextView
+                    android:id="@+id/tv_goods_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="件"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/sp_6" />
+
+                <TextView
+                    android:id="@+id/tv_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="共计:"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/sp_6" />
+            </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+            android:id="@+id/sll_consumer_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:radiusT="@dimen/dp_3"
+            app:solidColorT="@color/white">
+
+            <!--            <com.stkj.supermarket.base.ui.widget.FacePassCameraXLayout-->
+            <!--                android:id="@+id/fpc_face_x"-->
+            <!--                android:layout_width="@dimen/dp_120"-->
+            <!--                android:layout_height="@dimen/dp_120" />-->
+
+            <com.stkj.supermarket.base.ui.widget.FacePassCameraLayout
+                android:id="@+id/fpc_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fpcl_consume_lay_res="2"/>
+
+            <LinearLayout
+                android:id="@+id/ll_face_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_face_left_bt"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_15"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_5"
+                    app:radiusT="@dimen/dp_2_5"
+                    app:solidColorT="@color/color_0087FA" />
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_face_right_bt"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="取消"
+                    android:textColor="@color/color_151619"
+                    android:textSize="@dimen/sp_5"
+                    app:radiusT="@dimen/dp_2_5"
+                    app:solidColorT="@color/color_F1F2F4" />
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bottom_tips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_18"
+        android:background="@color/color_D3EAFF"
+        android:gravity="center"
+        android:text="您可选择刷脸、刷码、刷卡等多种方式进行结算"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_5"
+        android:visibility="gone" />
+
+</LinearLayout>

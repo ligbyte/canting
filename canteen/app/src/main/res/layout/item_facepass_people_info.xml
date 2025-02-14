@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.linelayout.LineLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_30"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingRight="@dimen/dp_18"
+    app:line_bottom="true"
+    app:line_color="@color/color_E8EAED"
+    app:line_width="@dimen/dp_0_5">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="姓名"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="账号"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_account_category"
+        android:layout_width="@dimen/dp_65"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="账号类别"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="@dimen/dp_65"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="部门"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <ImageView
+        android:id="@+id/iv_face"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_25"
+        android:gravity="center_vertical"
+        android:scaleType="fitStart"
+        android:src="@mipmap/icon_no_person_mini" />
+
+    <TextView
+        android:id="@+id/tv_update_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="最后一次同步时间"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+
+    <TextView
+        android:id="@+id/tv_add_face_status"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="入库状态"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8" />
+</com.stkj.common.ui.widget.linelayout.LineLinearLayout>

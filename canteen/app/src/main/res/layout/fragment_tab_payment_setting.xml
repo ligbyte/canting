@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_11"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_11"
+        app:radiusT="@dimen/dp_5"
+        app:solidColorT="@color/white">
+
+        <!-- 消费模式设置 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消费模式设置"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 消费模式选择 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="当前消费模式:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <FrameLayout
+                android:id="@+id/fl_consumer_mode"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_consumer_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_consumer_mode"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 消费确认弹窗 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="消费确认弹窗: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_consumer_confirm"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+        <!-- 称重为0时自动取消结算 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="称重自动取消结算: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_weight_auto_cancel_pay"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+        <!-- 消费成功间隔时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费成功间隔时间:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <FrameLayout
+                android:id="@+id/fl_pay_success_delay"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11">
+
+                <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                    android:id="@+id/stv_pay_success_delay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/sp_8"
+                    app:radiusT="@dimen/dp_4"
+                    app:strokeColorT="@color/color_E8EAED"
+                    app:strokeWidthT="@dimen/dp_0_5" />
+
+                <ImageView
+                    android:id="@+id/iv_pay_success_delay"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/dp_5_5"
+                    android:paddingRight="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_5_5"
+                    android:src="@drawable/selector_expand_arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 自动称重稳定次数 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动称重稳定次数:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_auto_weight_count"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_4"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_change_auto_weight_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击修改"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_10"
+                app:solidColorT="@color/color_0087FA" />
+
+        </LinearLayout>
+
+        <!-- 取餐模式排队人数上限 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取餐排队人数上限:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_take_meal_queue_limit"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_4"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_change_take_meal_queue_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击修改"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_10"
+                app:solidColorT="@color/color_0087FA" />
+        </LinearLayout>
+
+        <!-- 称重模式附加金额设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="称重附加金额设置:"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_weight_attach_amount"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_19"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_4"
+                app:strokeColorT="@color/color_E8EAED"
+                app:strokeWidthT="@dimen/dp_0_5" />
+
+            <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+                android:id="@+id/stv_change_weight_attach_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_19"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="点击修改"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                app:radiusT="@dimen/dp_10"
+                app:solidColorT="@color/color_0087FA" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/color_EDF0F5" />
+
+        <!-- 支付方式设置 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="支付方式设置"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 刷卡支付开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="刷卡支付开关: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_payType_card"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+        <!-- 刷脸支付开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="刷脸支付开关: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_payType_face"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+        <!-- 扫码支付开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_15"
+                android:text="扫码支付开关: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_payType_scan"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/color_EDF0F5" />
+
+        <!-- 通联支付设置 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="通联支付设置"
+            android:textColor="@color/color_171717"
+            android:textSize="@dimen/sp_8"
+            android:textStyle="bold" />
+
+        <!-- 聚合支付开关 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp_30"
+                android:text="支付开关: "
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_8" />
+
+            <ImageView
+                android:id="@+id/iv_switch_tonglian_pay"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:src="@drawable/selector_switch" />
+        </LinearLayout>
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GoodsDetailInfoLayout">
+        <attr name="layout_type" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="HomeTitleLayout">
+        <attr name="isLightMode" format="boolean" />
+        <attr name="htl_consume_lay_res" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="FacePassCameraXLayout">
+        <attr name="faceXPreview" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FacePassCameraLayout">
+        <attr name="facePreview" format="boolean" />
+        <attr name="fpcl_consume_lay_res" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CommonSeekProgressBar">
+        <attr name="cspb_progress" format="integer" />
+        <attr name="cspb_max_progress" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="GoodsAutoSearchLayout">
+        <attr name="gasl_search_right_margin" format="dimension" />
+        <attr name="gasl_search_left_margin" format="dimension" />
+    </declare-styleable>
+</resources>

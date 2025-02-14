@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <SeekBar
+        android:id="@+id/seekbar_pro"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_19"
+        android:layout_weight="1"
+        android:max="100"
+        android:maxHeight="@dimen/dp_4"
+        android:minHeight="@dimen/dp_4"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:progress="0"
+        android:progressDrawable="@drawable/shape_bg_seekbar"
+        android:splitTrack="false"
+        android:thumb="@drawable/shape_seekbar_thumb" />
+
+    <TextView
+        android:id="@+id/tv_pro"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/color_3489F5"
+        android:textSize="@dimen/sp_8" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HomeTitleLayout">
+        <attr name="isLightMode" format="boolean" />
+        <attr name="htl_consume_lay_res" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="FacePassCameraXLayout">
+        <attr name="faceXPreview" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FacePassCameraLayout">
+        <attr name="facePreview" format="boolean" />
+        <attr name="fpcl_consume_lay_res" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CommonSeekProgressBar">
+        <attr name="cspb_progress" format="integer" />
+        <attr name="cspb_max_progress" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SimpleCalculator">
+        <attr name="sc_confirm_txt" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SimpleInputNumber">
+        <attr name="sin_number_count" format="integer" />
+        <attr name="sin_consume_lay_res" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ConsumerBottomTipsLayout">
+        <attr name="cbtl_consume_lay_res" format="integer" />
+    </declare-styleable>
+</resources>

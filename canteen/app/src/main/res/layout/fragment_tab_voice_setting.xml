@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_18"
+    android:paddingTop="@dimen/dp_11"
+    android:paddingRight="@dimen/dp_18"
+    android:paddingBottom="@dimen/dp_11"
+    app:radiusT="@dimen/dp_5"
+    app:solidColorT="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="语音设置"
+        android:textColor="@color/color_171717"
+        android:textSize="@dimen/sp_8"
+        android:textStyle="bold" />
+
+    <!-- 当前音量大小 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="当前音量:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.cashier.base.ui.widget.CommonSeekProgressBar
+            android:id="@+id/seekbar_voice_size"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_11" />
+    </LinearLayout>
+
+    <!-- 当前语速 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="当前语速:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.cashier.base.ui.widget.CommonSeekProgressBar
+            android:id="@+id/seekbar_voice_speed"
+            android:layout_width="@dimen/dp_180"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_11"
+            app:cspb_progress="50" />
+
+    </LinearLayout>
+
+    <!-- 语音测试 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:text="语音测试:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_tts_test"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="试听"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 网络状态语音提醒 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络状况提醒: "
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <ImageView
+            android:id="@+id/iv_switch_net_status"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:src="@drawable/selector_switch" />
+    </LinearLayout>
+
+    <!-- 消费成功文案 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消费成功文案:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_consumer_success_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:paddingLeft="@dimen/dp_11"
+            android:paddingRight="@dimen/dp_11"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_4"
+            android:text="消费成功"
+            app:strokeColorT="@color/color_E8EAED"
+            app:strokeWidthT="@dimen/dp_0_5" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_change_consumer_success_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 取餐成功文案 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取餐成功文案:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_take_success_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:paddingLeft="@dimen/dp_11"
+            android:paddingRight="@dimen/dp_11"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_4"
+            android:text="取餐成功"
+            app:strokeColorT="@color/color_E8EAED"
+            app:strokeWidthT="@dimen/dp_0_5" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_change_take_success_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+    <!-- 支付方式文案 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付方式文案:"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_8" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_pay_type_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:paddingLeft="@dimen/dp_11"
+            android:paddingRight="@dimen/dp_11"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_4"
+            android:text="请刷脸、刷卡或扫码"
+            app:strokeColorT="@color/color_E8EAED"
+            app:strokeWidthT="@dimen/dp_0_5" />
+
+        <com.stkj.common.ui.widget.shapelayout.ShapeTextView
+            android:id="@+id/stv_change_pay_type_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="点击修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8"
+            app:radiusT="@dimen/dp_10"
+            app:solidColorT="@color/color_0087FA" />
+    </LinearLayout>
+
+</com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>

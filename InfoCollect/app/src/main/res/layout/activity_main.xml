@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_main_bg"
+    tools:context=".home.ui.activity.MainActivity">
+
+    <!-- 顶部状态栏 -->
+    <com.stkj.infocollect.home.ui.widget.HomeTitleLayout
+        android:id="@+id/htl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_133"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout
+            android:id="@+id/sfl_open_card"
+            android:layout_width="@dimen/dp_116"
+            android:layout_height="match_parent"
+            app:shadow_corner="@dimen/dp_3"
+            app:shadow_elevation="@dimen/dp_6"
+            app:shadow_sold_color="@color/transparent"
+            app:shadow_start_color="@color/color_155881C5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_main_menu_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/icon_open_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="开卡"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout>
+
+        <com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout
+            android:id="@+id/sfl_supply_card"
+            android:layout_width="@dimen/dp_116"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            app:shadow_corner="@dimen/dp_3"
+            app:shadow_elevation="@dimen/dp_6"
+            app:shadow_sold_color="@color/transparent"
+            app:shadow_start_color="@color/color_155881C5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_main_menu_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/icon_supply_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="挂失补卡"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout>
+
+        <com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout
+            android:id="@+id/sfl_cancel_supply_card"
+            android:layout_width="@dimen/dp_116"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            app:shadow_corner="@dimen/dp_3"
+            app:shadow_elevation="@dimen/dp_6"
+            app:shadow_sold_color="@color/transparent"
+            app:shadow_start_color="@color/color_155881C5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_main_menu_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_42"
+                    android:layout_height="@dimen/dp_42"
+                    android:src="@mipmap/icon_cancel_supply_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="取消挂失补卡"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.stkj.common.ui.widget.shadowlayout.ShadowFrameLayout>
+
+    </LinearLayout>
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:id="@+id/sll_setting"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:bottomLeftRadiusT="@dimen/dp_15"
+        app:solidColorT="@color/color_88ffffff"
+        app:strokeColorT="@color/white"
+        app:strokeWidthT="@dimen/dp_1"
+        app:topLeftRadiusT="@dimen/dp_15">
+
+        <ImageView
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:src="@mipmap/icon_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:text="设置"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_10" />
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_110"
+        android:layout_gravity="bottom"
+        android:scaleType="fitEnd"
+        android:src="@mipmap/icon_main_bottom_bg" />
+
+    <!-- 主布局布局占位(可以将弹窗做到这里不用dialogFragment,节省内存) -->
+    <FrameLayout
+        android:id="@+id/fl_place_holder_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--登录占位布局-->
+    <FrameLayout
+        android:id="@+id/fl_login_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 全局占位 -->
+    <View
+        android:id="@+id/root_view_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 屏幕保护 -->
+    <FrameLayout
+        android:id="@+id/fl_screen_protect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_main_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="@dimen/dp_32"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_64"
+            android:src="@mipmap/icon_canteen_label" />
+    </FrameLayout>
+
+</FrameLayout>

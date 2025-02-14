@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/fl_consumer_list_content"
+        android:layout_width="@dimen/dp_210"
+        android:layout_height="match_parent" />
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:radiusT="@dimen/dp_5"
+        app:solidColorT="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_default_face"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:background="@mipmap/icon_consumer_camera"
+            android:padding="@dimen/dp_4"
+            android:src="@mipmap/icon_no_person" />
+
+        <TextView
+            android:id="@+id/tv_no_consumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:includeFontPadding="false"
+            android:text="暂无消费用户"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:includeFontPadding="false"
+            android:text="¥ 0.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_bill_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="(今日已消费0次)"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone" />
+    </com.stkj.common.ui.widget.shapelayout.ShapeLinearLayout>
+
+</LinearLayout>

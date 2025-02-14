@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_88000000"
+    android:clickable="true">
+
+    <com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout
+        android:layout_width="@dimen/dp_360"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:layout_marginBottom="@dimen/dp_11"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:radiusT="@dimen/dp_5"
+        app:solidColorT="@color/white">
+
+        <com.stkj.common.ui.widget.linelayout.LineTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center"
+            android:text="人脸识别阈值设置"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold"
+            app:line_bottom="true"
+            app:line_color="@color/color_EDF0F5"
+            app:line_width="@dimen/dp_0_5" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="right"
+            android:padding="@dimen/dp_9"
+            android:src="@mipmap/icon_dialog_close" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_19"
+                android:paddingRight="@dimen/dp_19"
+                android:paddingBottom="@dimen/dp_19">
+
+                <!-- 开启活体 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_liveness"
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="开启活体:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <ImageView
+                        android:id="@+id/iv_switch_liveness"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:layout_marginRight="@dimen/dp_25"
+                        android:src="@drawable/selector_switch" />
+                </LinearLayout>
+
+                <!-- 口罩识别 | 开启相似度 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="戴口罩识别:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <ImageView
+                        android:id="@+id/iv_switch_occlusionMode"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:src="@drawable/selector_switch" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:text="开启相似度:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <ImageView
+                        android:id="@+id/iv_switch_GaThreshold"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:src="@drawable/selector_switch" />
+                </LinearLayout>
+
+                <!-- 当前识别阈值 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="当前识别阈值:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                        android:id="@+id/seekbar_searchThreshold"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_11" />
+                </LinearLayout>
+
+                <!-- 相似度阈值 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="相似度阈值:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                        android:id="@+id/seekbar_GaThreshold"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_11" />
+                </LinearLayout>
+
+                <!-- 当前活体阈值 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="当前活体阈值:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                        android:id="@+id/seekbar_livenessThreshold"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_11" />
+                </LinearLayout>
+
+                <!-- 人脸角度阈值 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="当前角度阈值:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                        android:id="@+id/seekbar_poseThreshold"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        app:cspb_max_progress="30" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_65"
+                    android:text="(人脸与摄像头的俯仰角度)"
+                    android:textColor="@color/color_3489F5"
+                    android:textSize="@dimen/sp_7" />
+
+                <!-- 当前识别距离 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="当前识别距离:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                        android:id="@+id/stv_detect_MinThreshold50"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:gravity="center"
+                        android:text="0.5m"
+                        android:textSize="@dimen/sp_7"
+                        app:normalRadiusT="@dimen/dp_3"
+                        app:normalSolidColorT="@color/color_f0f2f9"
+                        app:selectRadiusT="@dimen/dp_3"
+                        app:selectSolidColorT="@color/white"
+                        app:selectStrokeColorT="@color/color_3489F5"
+                        app:selectStrokeWidthT="@dimen/dp_0_5"
+                        app:shapeNormalColor="@color/color_171717"
+                        app:shapeSelect="true"
+                        app:shapeSelectColor="@color/color_2261E0" />
+
+                    <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                        android:id="@+id/stv_detect_MinThreshold80"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:gravity="center"
+                        android:text="0.8m"
+                        android:textSize="@dimen/sp_7"
+                        app:normalRadiusT="@dimen/dp_3"
+                        app:normalSolidColorT="@color/color_f0f2f9"
+                        app:selectRadiusT="@dimen/dp_3"
+                        app:selectSolidColorT="@color/white"
+                        app:selectStrokeColorT="@color/color_3489F5"
+                        app:selectStrokeWidthT="@dimen/dp_0_5"
+                        app:shapeNormalColor="@color/color_171717"
+                        app:shapeSelectColor="@color/color_2261E0" />
+
+                    <com.stkj.common.ui.widget.shapeselectlayout.ShapeSelectTextView
+                        android:id="@+id/stv_detect_MinThreshold100"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:gravity="center"
+                        android:text="1m"
+                        android:textSize="@dimen/sp_7"
+                        app:normalRadiusT="@dimen/dp_3"
+                        app:normalSolidColorT="@color/color_f0f2f9"
+                        app:selectRadiusT="@dimen/dp_3"
+                        app:selectSolidColorT="@color/white"
+                        app:selectStrokeColorT="@color/color_3489F5"
+                        app:selectStrokeWidthT="@dimen/dp_0_5"
+                        app:shapeNormalColor="@color/color_171717"
+                        app:shapeSelectColor="@color/color_2261E0" />
+                </LinearLayout>
+
+                <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                    android:id="@+id/seekbar_detect_faceMinThreshold"
+                    android:layout_width="@dimen/dp_180"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_marginLeft="@dimen/dp_65"
+                    android:visibility="gone"
+                    app:cspb_max_progress="512" />
+
+                <TextView
+                    android:id="@+id/tv_detect_faceMinThreshold_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_65"
+                    android:text="(人脸识别距离,值越大,识别距离越远)"
+                    android:textColor="@color/color_3489F5"
+                    android:textSize="@dimen/sp_7"
+                    android:visibility="gone" />
+
+                <!-- 人脸入库阈值 -->
+                <LinearLayout
+                    android:id="@+id/ll_add_face_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_55"
+                        android:layout_height="wrap_content"
+                        android:text="人脸入库阈值:"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_8" />
+
+                    <com.stkj.infocollect.base.ui.widget.CommonSeekProgressBar
+                        android:id="@+id/seekbar_add_faceMinThreshold"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_19"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        app:cspb_max_progress="512" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_add_face_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_65"
+                    android:text="(建议100,修改此值会影响人脸入库的成功率)"
+                    android:textColor="@color/color_3489F5"
+                    android:textSize="@dimen/sp_7"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </com.stkj.common.ui.widget.shapelayout.ShapeFrameLayout>
+</FrameLayout>

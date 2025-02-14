@@ -1,0 +1,249 @@
+plugins {
+    id 'com.android.application'
+    id 'org.greenrobot.greendao'
+}
+//当前编译的flavor
+def currentFlavor = "defaultDevice"
+task initCurrentFlavor(dependsOn: sourceSets) {
+    def taskRequest = gradle.getStartParameter().getTaskRequests().toString().toLowerCase()
+    if (taskRequest.contains("maibaole_rk3568")) {
+        currentFlavor = "maibaole_rk3568"
+    } else if (taskRequest.contains("maibaole_rk3399")) {
+        currentFlavor = "maibaole_rk3399"
+    } else if (taskRequest.contains("telpo_d2")) {
+        currentFlavor = "telpo_d2"
+    } else if (taskRequest.contains("telpo_c50a")) {
+        if (taskRequest.contains("telpo_c50a_pro")) {
+            currentFlavor = "telpo_c50a_pro"
+        } else {
+            currentFlavor = "telpo_c50a"
+        }
+    }
+    println("当前构建的设备为： " + currentFlavor)
+}
+
+//编译后apk名字携带信息(commitId + date)
+def gitMainSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def gitCommonSha = 'git -C common rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def gitDeviceInterfaceSha = 'git -C deviceinterface rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def gitDeviceImplSha = ''
+if (gitMainSha.isEmpty()) {
+    gitMainSha = 'git rev-parse --short HEAD'.execute().text.trim()
+    gitCommonSha = 'git -C common rev-parse --short HEAD'.execute().text.trim()
+    gitDeviceInterfaceSha = 'git -C deviceinterface rev-parse --short HEAD'.execute().text.trim()
+    if (currentFlavor == 'defaultDevice') {
+        gitDeviceImplSha = gitMainSha
+    } else {
+        gitDeviceImplSha = "git -C ${currentFlavor} rev-parse --short HEAD".execute().text.trim()
+    }
+} else {
+    if (currentFlavor == 'defaultDevice') {
+        gitDeviceImplSha = gitMainSha
+    } else {
+        gitDeviceImplSha = "git -C ${currentFlavor} rev-parse --short HEAD".execute([], project.rootDir).text.trim()
+    }
+}
+def gitSha = gitMainSha + "_" + gitCommonSha + "_" + gitDeviceInterfaceSha + "_" + gitDeviceImplSha
+println("--gitSha--" + gitSha)
+def buildDate = new Date().format("yyyy-MM-dd HH:mm", TimeZone.getTimeZone("GMT+08:00"))
+
+android {
+    namespace 'com.stkj.cashier'
+    compileSdk rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.stkj.cashier2"
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+        versionCode 101
+        versionName "1.0.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk { abiFilters "armeabi", "armeabi-v7a", "arm64-v8a" }
+        buildConfigField "String", "GIT_SHA", "\"" + gitSha + "\""
+        buildConfigField "String", "BUILD_TIME", "\"" + buildDate + "\""
+    }
+
+    signingConfigs {
+        defaultDevice {
+            keyAlias 'canteen'
+            keyPassword '123456'
+            storeFile file('keystore')
+            storePassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        maibaole_rk3568 {
+            keyAlias 'android'
+            keyPassword 'android'
+            storeFile file('../../maibaole_rk3568/platform-pwd-android.jks')
+            storePassword 'android'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        maibaole_rk3399 {
+            keyAlias 'android'
+            keyPassword 'android'
+            storeFile file('../../maibaole_rk3399/platform-pwd-android.jks')
+            storePassword 'android'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        telpo_d2 {
+            keyAlias 'telpo'
+            keyPassword '86337898'
+            storeFile file('../../telpo_d2/platform_D2_580P.jks')
+            storePassword '86337898'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        telpo_c50a {
+            keyAlias 'telpo'
+            keyPassword '86337898'
+            storeFile file('../../telpo_c50a/platform_c50a.jks')
+            storePassword '86337898'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        telpo_c50a_pro {
+            keyAlias 'telpo'
+            keyPassword '86337898'
+            storeFile file('../../telpo_c50a_pro/platform_c50a.jks')
+            storePassword '86337898'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig release.signingConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android.buildFeatures.buildConfig true
+
+    flavorDimensions = ["device"]
+    productFlavors {
+        defaultDevice {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"\"')
+            buildConfigField('String', 'deviceType', '\"defaultDevice\"')
+            manifestPlaceholders = [
+                    shareUserId: ""
+            ]
+            signingConfig signingConfigs.defaultDevice
+        }
+        maibaole_rk3568 {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"com.stkj.device.maibaole_rk3568.DeviceImpl\"')
+            buildConfigField('String', 'deviceType', '\"cashier_maibaole_rk3568\"')
+            manifestPlaceholders = [
+                    shareUserId: "android.uid.system"
+            ]
+            signingConfig signingConfigs.maibaole_rk3568
+        }
+        maibaole_rk3399 {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"com.stkj.device.maibaole_rk3399.DeviceImpl\"')
+            buildConfigField('String', 'deviceType', '\"cashier_maibaole_rk3399\"')
+            manifestPlaceholders = [
+                    shareUserId: "android.uid.system"
+            ]
+            signingConfig signingConfigs.maibaole_rk3399
+        }
+        telpo_d2 {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"com.stkj.device.telpo_d2.DeviceImpl\"')
+            buildConfigField('String', 'deviceType', '\"cashier_telpo_d2\"')
+            manifestPlaceholders = [
+                    shareUserId: "android.uid.system"
+            ]
+            signingConfig signingConfigs.telpo_d2
+        }
+        telpo_c50a {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"com.stkj.device.telpo_c50a.DeviceImpl\"')
+            buildConfigField('String', 'deviceType', '\"cashier_telpo_c50a\"')
+            manifestPlaceholders = [
+                    shareUserId: "android.uid.system"
+            ]
+            signingConfig signingConfigs.telpo_c50a
+        }
+        telpo_c50a_pro {
+            dimension "device"
+            buildConfigField('String', 'deviceInterface', '\"com.stkj.device.telpo_c50a_pro.DeviceImpl\"')
+            buildConfigField('String', 'deviceType', '\"cashier_telpo_c50a_pro\"')
+            manifestPlaceholders = [
+                    shareUserId: "android.uid.system"
+            ]
+            signingConfig signingConfigs.telpo_c50a
+        }
+    }
+
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "stkjcashier_${variant.flavorName}_v${variant.versionName}_${variant.buildType.name}_${gitMainSha}.apk"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    //other dependencies
+
+    //-------------- 模块依赖library --------------
+    //基础通用模块
+    api project(path: ':common')
+    //硬件设备接口(不同设备实现该模块)
+    api project(path: ':deviceinterface')
+    //旷视人脸识别
+    implementation project(path: ':cbgfacefass')
+
+    //不同设备不同实现
+    if ("maibaole_rk3568" == currentFlavor) {
+        implementation project(path: ':maibaole_rk3568')
+    } else if ("maibaole_rk3399" == currentFlavor) {
+        implementation project(path: ':maibaole_rk3399')
+    } else if ("telpo_d2" == currentFlavor) {
+        implementation project(path: ':telpo_d2')
+    } else if ("telpo_c50a" == currentFlavor) {
+        implementation project(path: ':telpo_c50a')
+    } else if ("telpo_c50a_pro" == currentFlavor) {
+        implementation project(path: ':telpo_c50a_pro')
+    }
+
+    //调试相关
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+greendao {
+    schemaVersion 1 // 数据库版本号
+    daoPackage 'com.stkj.cashier.base.greendao.generate'  // 设置 DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'  // 设置 DaoMaster、DaoSession、Dao 目录
+}

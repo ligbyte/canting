@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/fl_consumer_list_content"
+        android:layout_width="@dimen/dp_210"
+        android:layout_height="match_parent" />
+
+    <com.stkj.cashier.pay.ui.weight.SimpleCalculator
+        android:id="@+id/sc_calc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_11"
+        app:sc_confirm_txt="结算" />
+
+</LinearLayout>
