@@ -70,6 +70,7 @@ dependencies {
     //图片加载库
     api "com.github.bumptech.glide:glide:${rootProject.glideVerison}"
     api "com.github.bumptech.glide:okhttp3-integration:${rootProject.glideVerison}"
+
     annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.glideVerison}"
 
     //事件总线
@@ -152,6 +153,22 @@ dependencies {
 //    api "com.xlythe:math-library:${rootProject.mathLibraryVersion}"
 //    api "com.xlythe:arity:${rootProject.arityVersion}"
 //    api 'org.matheclipse:matheclipse-core:3.0.0'
+
+    //打印库
+    implementation files('libs/3.2.4-release.aar')
+    //B50系列（B50W/B50/T6/T7/T8）/B11系列机型引入，非对应机型可以不引入
+    implementation files('libs/LPAPI-2019-11-20-R.jar')
+    implementation files('libs/image-1.8.7.aar')
+    implementation files('libs/dialog_lib.aar')
+    implementation files('libs/lib_loadingview.aar')
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //权限库
+    implementation 'com.guolindev.permissionx:permissionx:1.7.1'
+    //loading库
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //guava引入，便于使用线程池
+    implementation 'androidx.concurrent:concurrent-futures:1.1.0'
 
     //调试相关
     testImplementation 'junit:junit:4.13.2'

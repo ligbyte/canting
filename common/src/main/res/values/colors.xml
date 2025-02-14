@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="light_gray">#DCDCDC</color>
+    <color name="dark_gray">#B4B4B4</color>
+
     <color name="status_bar_below_m">#999999</color>
     <color name="status_bar_above_m">#ffffff</color>
     <color name="color_333333">#333333</color>

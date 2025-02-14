@@ -425,5 +425,8 @@
     <dimen name="sp_36">36sp</dimen>
     <dimen name="sp_48">48sp</dimen>
     <dimen name="sp_72">72sp</dimen>
-
+    <dimen name="dp16">10dp</dimen>
+    <dimen name="dp54">54dp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="dp8">8dp</dimen>
 </resources>
