@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context="com.niimbot.printer.fragment.WifiConnectFragment">
+    tools:context="com.stkj.common.printer.fragment.WifiConnectFragment">
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
